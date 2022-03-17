@@ -140,7 +140,7 @@ ve.ui.MWAceEditorWidget.prototype.setupEditor = function () {
 	this.editor.getSession().on( 'change', this.onEditorChange.bind( this ) );
 	this.editor.renderer.on( 'resize', this.onEditorResize.bind( this ) );
 	this.setEditorValue( this.getValue() );
-	this.editor.resize();
+	this.editor.resize( true );
 };
 
 /**
