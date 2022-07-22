@@ -329,7 +329,7 @@ class VisualEditorHooks {
 		$title = $article->getTitle();
 
 		if ( $req->getVal( 'venoscript' ) ) {
-			$req->response()->setCookie( 'VEE', 'wikitext', 0, [ 'prefix' => '' ] );
+			$req->response()->setCookie( 'VEE', 'wikitext', 0, [ 'prefix' => '', 'sameSite' => 'Strict' ] );
 			$services->getUserOptionsManager()->setOption( $user, 'visualeditor-editor', 'wikitext' );
 			if ( !wfReadOnly() && $user->isRegistered() ) {
 				DeferredUpdates::addCallableUpdate( static function () use ( $user ) {
