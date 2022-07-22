@@ -371,7 +371,7 @@
 			$( '.mw-editsection a' ).text( getTabMessage( sectionKey ) );
 		}
 
-		mw.cookie.set( 'VEE', editor, { path: '/', expires: 30 * 86400, prefix: '' } );
+		mw.cookie.set( 'VEE', editor, { path: '/', expires: 30 * 86400, prefix: '', sameSite: 'Strict' } );
 
 		// Save user preference if logged in
 		if (
